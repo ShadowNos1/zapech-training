@@ -133,6 +133,10 @@ function App() {
           blockTestsCompleted={blockTestsCompleted}
           onSelectBlock={startBlock}
           totalScore={getTotalScore()}
+          onBack={() => {
+      setCurrentProfession(null);
+      setView('profession-select');
+    }}
         />
       )}
       

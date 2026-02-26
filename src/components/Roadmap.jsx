@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronLeft, CheckCircle, Lock, PlayCircle } from 'lucide-react';
 import { trainingData } from '../data/trainingData';
 
-function Roadmap({ profession, completedLessons, blockTestsCompleted, onSelectBlock, totalScore }) {
+function Roadmap({ profession, completedLessons, blockTestsCompleted, onSelectBlock, totalScore, onBack }) {
   const profData = trainingData[profession];
 
   const isBlockLocked = (blockIndex) => {
@@ -22,10 +22,14 @@ function Roadmap({ profession, completedLessons, blockTestsCompleted, onSelectBl
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-100">
         <div className="px-5 pt-6 pb-3">
+          <button onClick={onBack} className="flex items-center gap-2 text-sm font-bold text-slate-500 active:scale-95 transition-transform">
+                                                    Назад
+                        </button>
           <div className="flex items-center justify-between mb-2">
             <div className="text-sm font-bold text-slate-500">
               Обучение
             </div>
+            
             <div className="bg-red-600 px-4 py-2 rounded-full shadow-lg shadow-red-200">
               <span className="text-sm font-black text-white">{totalScore}%</span>
             </div>
