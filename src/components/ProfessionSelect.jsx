@@ -1,9 +1,10 @@
 import React from 'react';
-import { User, DoorOpen, GlassWater } from 'lucide-react';
+import { User, DoorOpen, GlassWater, Footprints } from 'lucide-react';
 import { trainingData } from '../data/trainingData';
 
 function ProfessionSelect({ onSelect }) {
   const professions = [
+    { id: 'runner', icon: Footprints, color: 'bg-green-100', textColor: 'text-green-600', title: 'Ранер', desc: 'Помощь официантам и уборка' },
     { id: 'waiter', icon: User, color: 'bg-red-100', textColor: 'text-red-600', title: 'Официант', desc: 'Обслуживание гостей в зале' },
     { id: 'hostess', icon: DoorOpen, color: 'bg-amber-100', textColor: 'text-amber-600', title: 'Хостес', desc: 'Встреча и посадка гостей' },
     { id: 'bartender', icon: GlassWater, color: 'bg-blue-100', textColor: 'text-blue-600', title: 'Бармен', desc: 'Приготовление напитков' },

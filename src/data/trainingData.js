@@ -17,6 +17,12 @@ const combineTests = (specificTests) => {
 };
 
 export const trainingData = {
+  runner: {
+    name: "Ранер",
+    blocks: combineBlocks(runnerBlocks),
+    tests: combineTests(runnerTests)
+  },
+  
   waiter: {
     name: "Официант",
     blocks: combineBlocks(waiterBlocks),
@@ -34,12 +40,6 @@ export const trainingData = {
     blocks: combineBlocks(bartenderBlocks),
     tests: combineTests(bartenderTests)
   },
-  
-  runner: {
-    name: "Ранер",
-    blocks: combineBlocks(runnerBlocks),
-    tests: combineTests(runnerTests)
-  }
 };
 
 export default trainingData;
