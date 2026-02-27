@@ -42,6 +42,9 @@ function ProfessionSelect({ onSelect }) {
           );
         })}
       </div>
+      <div className="mt-10 text-center text-slate-400 text-xs">
+        © 2024 ЗАПЕЧЬ. Все права защищены.
+      </div>
     </div>
   );
 }
